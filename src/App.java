@@ -1,19 +1,25 @@
 
 public class App {
     public static void main(String[] args) throws Exception {
-        int[] original = { 5, 3, 4, 1, 2};
+        int[] original = { 5, 6, 4, 1, 2, 3};
         int[] b = original.clone();
-        int[] c = original;
+        int[] c = original.clone();
 
         //INSTANCIAR el archivo BUBBLE
         //Instancio la clase Bubble
         Bubble buuble = new Bubble();
         // EJECUTAR CODE DEL ARCHIVO BUBBLE USO LA INSTANCIA
+
         printArreglo(b);
         buuble.sort(b);
         printArreglo(b);
 
-        
+
+        System.out.println("Selection");
+        Selection selection = new Selection();
+        printArreglo(c);
+        selection.sort(c);
+        printArreglo(c);
 
     }
 
@@ -24,4 +30,11 @@ public class App {
         
 
     }
+    public void printSelection(int[] arr){
+        for (int i : arr){
+            System.out.print(i + " - ");
+        }
+        System.out.println();
+    }
+    
 }
