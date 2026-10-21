@@ -4,6 +4,7 @@ public class App {
         int[] original = { 5, 6, 4, 1, 2, 3};
         int[] b = original.clone();
         int[] c = original.clone();
+        int[] d = original.clone();
 
         //INSTANCIAR el archivo BUBBLE
         //Instancio la clase Bubble
@@ -21,6 +22,20 @@ public class App {
         selection.sort(c);
         printArreglo(c);
 
+        InsertionSort insertion = new InsertionSort();
+        System.out.println("--- Selection Insertion ---");
+        System.out.println("Original");
+        printArreglo(d);
+        insertion.sort(d);
+
+        System.out.println("Orden des");
+        printArreglo(d);
+        
+
+
+
+
+
     }
 
     public static void printArreglo(int[] arr){
@@ -36,5 +51,7 @@ public class App {
         }
         System.out.println();
     }
+
+    
     
 }
